@@ -1,0 +1,8 @@
+name: Compile, test and deploy
+on: [ push ]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo date
+        run: echo "Current time is $(date)"
