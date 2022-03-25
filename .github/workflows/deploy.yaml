@@ -32,4 +32,4 @@ jobs:
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: vttp2022
-          heorku_email: chukmunnlee@gmail.com
+          heroku_email: chukmunnlee@gmail.com
