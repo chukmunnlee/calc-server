@@ -24,10 +24,10 @@ jobs:
         with:
           maven-version: 3.8.5
       - name: run test
-        if: ${{ !contains(github.event.head_commit.message, "skip test") }}
+        if: ${{ !contains(github.event.head_commit.message, 'skip test') }}
         run: mvn test
       - name: Deploy to heroku
-        if: ${{ contains(github.event.head_commit.message, "heroku deploy") }}
+        if: ${{ contains(github.event.head_commit.message, 'heroku deploy') }}
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
