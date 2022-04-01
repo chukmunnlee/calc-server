@@ -1,0 +1,15 @@
+name: Release app
+on: 
+  push: 
+    tags:
+    - 'v*'
+jobs:
+  push_to_heroku:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Heroku 
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_app_name: vttp2022
+        heroku_email: chukmunnlee@gmail.com
